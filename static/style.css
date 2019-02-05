@@ -1,0 +1,68 @@
+#toolset {
+    width     : 100px;
+    height    : 440px;
+    position  : absolute;
+    left      : 0px;
+    top       : 50px; 
+    background: #FF0000;
+}
+
+#paint {
+    position  : absolute;
+    left      : 130px;
+    top       : 50px;
+}
+
+#colorset {
+    position  : absolute;
+    left      : 0px;
+    top       : 525px;
+    width     : 560px;
+    background: #FF0000;
+}
+
+#penciltool {
+    background: #0000FF;
+    color     : #FFFFFF;
+    width     : 80px;
+    height    : 25px;
+}
+
+#erasertool {
+    background: #0000FF;
+    color     : #FFFFFF;
+    width     : 80px;
+    height    : 25px;
+}
+
+#resettool {
+    background: #0000FF;
+    color     : #FFFFFF;
+    width     : 80px;
+    height    : 25px;
+}
+
+#save {
+    background: #0000FF;
+    color     : #FFFFFF;
+    width     : 80px;
+    height    : 25px;
+}
+
+#pixel_plus {
+    background: #0000FF;
+    color     : #FFFFFF;
+    width     : 25px;
+    height    : 25px;
+}
+
+#pixel_minus {
+    background: #0000FF;
+    color     : #FFFFFF;
+    width     : 25px;
+    height    : 25px;
+}
+
+label {
+    color : #FFFFFF;
+}
