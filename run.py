@@ -6,11 +6,7 @@ from PIL import Image
 import io
 import glob
 
-
-
 app = Flask(__name__)
-
-count = 0
 
 
 @app.route('/', methods=['GET', 'POST'])
@@ -43,7 +39,7 @@ def paintapp():
 
         return '{}'.format(count), 200
 
-    
+
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 5000))
     app.run(host='0.0.0.0', port=port)

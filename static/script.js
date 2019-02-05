@@ -24,16 +24,16 @@ function add_pixel(){
     max_lineWidth += 1;
     document.getElementById("line_width").innerHTML = max_lineWidth
 }
-        
+
 function reduce_pixel(){
     max_lineWidth = Math.max(1, max_lineWidth - 1)
     document.getElementById("line_width").innerHTML = max_lineWidth
 }
-               
+
 function reset(){
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 }
-        
+
 // pencil tool
 
 function pencil(){
@@ -85,22 +85,22 @@ function pencil(){
     }
 }
 
-        
+
 // eraser tool
-        
+
 function eraser(){
-    
+
     canvas.onmousedown = function(e){
         curX = e.clientX - canvas.offsetLeft;
         curY = e.clientY - canvas.offsetTop;
         hold = true;
-            
+
         prevX = curX;
         prevY = curY;
         ctx.beginPath();
         ctx.moveTo(prevX, prevY);
     };
-        
+
     canvas.onmousemove = function(e){
         if(hold){
             curX = e.clientX - canvas.offsetLeft;
@@ -108,15 +108,15 @@ function eraser(){
             draw();
         }
     };
-        
+
     canvas.onmouseup = function(e){
         hold = false;
     };
-        
+
     canvas.onmouseout = function(e){
         hold = false;
     };
-        
+
     function draw(){
         ctx.lineTo(curX, curY);
         ctx.strokeStyle = "#ffffff";
@@ -133,7 +133,7 @@ function save(){
     if (filename.length == 0){
         alert("You should have a character name.")
     } else {
-        $.post("/", { save_fname: filename, save_cdata: data, save_image: image }, function(result){
+        $.post("https://tengwar-digit.herokuapp.com/", { save_fname: filename, save_cdata: data, save_image: image }, function(result){
             document.getElementById("count").innerHTML  = result;
         });
         reset()
