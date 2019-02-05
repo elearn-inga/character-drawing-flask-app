@@ -133,8 +133,8 @@ function save(){
     if (filename.length == 0){
         alert("You should have a character name.")
     } else {
-        //$.post("https://tengwar-digit.herokuapp.com/",
-        $.post("http://localhost:5000",
+        $.post("https://tengwar-digit.herokuapp.com/",
+//        $.post("http://localhost:5000",
          { save_fname: filename, save_cdata: data, save_image: image, predict: false}, function(result){
             data = JSON.parse(result)
             document.getElementById("count").innerHTML  = data.result;
@@ -149,8 +149,8 @@ function predict(){
     var data = JSON.stringify(canvas_data);
     var image = canvas.toDataURL();
 
-    //$.post("https://tengwar-digit.herokuapp.com/",
-    $.post("http://localhost:5000",
+    $.post("https://tengwar-digit.herokuapp.com/",
+//    $.post("http://localhost:5000",
      { save_fname: filename, save_cdata: data, save_image: image, predict: true}, function(result){
         data = JSON.parse(result)
         table = document.getElementById("prediction_table");
