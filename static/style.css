@@ -43,6 +43,13 @@
 }
 
 #save {
+    background: #AAAAAA;
+    color     : #FFFFFF;
+    width     : 80px;
+    height    : 25px;
+}
+
+#predict {
     background: #0000FF;
     color     : #FFFFFF;
     width     : 80px;
@@ -63,6 +70,11 @@
     height    : 25px;
 }
 
+#prediction_table {
+    color : #FFFFFF;
+}
+
 label {
     color : #FFFFFF;
 }
+

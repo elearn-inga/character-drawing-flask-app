@@ -25,21 +25,57 @@
             </tr>
         </table></p>
         <fieldset id="colorset">
-        <table>
-            <tr>
-                <td><label>Line Width</label></td>
-                <td><button id="pixel_plus" type="button" onclick="add_pixel()" style="width: 25px;">+</button></td>
-                <td><button id="pixel_minus" type="button" onclick="reduce_pixel()" style="width: 25px;">-</button></td>
-                <td><label id="line_width"> </label></td>
-            </tr>
-        </table>
-        <table>
-        <tr>
-            <td><label>Number of created images: </label></td>
-            <td><label id="count"></label></td>
-        </tr>
-        </table>
-        <label>Character: </label><input id="fname" type="text"><button id="save" onclick="save()">Save</button>
+            <table>
+                <tr>
+                    <td><label>Line Width</label></td>
+                    <td><button id="pixel_plus" type="button" onclick="add_pixel()" style="width: 25px;">+</button></td>
+                    <td><button id="pixel_minus" type="button" onclick="reduce_pixel()" style="width: 25px;">-</button></td>
+                    <td><label id="line_width"> </label></td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <td><label>Number of created images: </label></td>
+                    <td><label id="count"></label></td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <td>
+                        <button id="save" onclick="save()" disabled>Save</button>
+                    </td>
+                    <td>
+                        <label>Character: </label><input id="fname" type="text" disabled>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button id="predict" onclick="predict()">Predict</button>
+                    </td>
+                    <td>
+                        <label>Prediction: </label><label id="predicted_class"></label>
+                    </td>
+                </tr>
+            </table>
+            <br>
+            <table id="prediction_table">
+                <tr>
+                    <td width = 38>00.00</td>
+                    <td width = 38>00.00</td>
+                    <td width = 38>00.00</td>
+                    <td width = 38>00.00</td>
+                    <td width = 38>00.00</td>
+                    <td width = 38>00.00</td>
+                    <td width = 38>00.00</td>
+                    <td width = 38>00.00</td>
+                    <td width = 38>00.00</td>
+                    <td width = 38>00.00</td>
+                    <td width = 38>00.00</td>
+                    <td width = 38>00.00</td>
+                </tr>
+            </table>
+            <br>
+            <img src="/static/tengwar_digits.jpg" width="550">
         </fieldset>
         <script src="https://code.jquery.com/jquery-1.8.3.js"></script>
         <script src=" {{ url_for('static', filename='script.js') }}"></script>
